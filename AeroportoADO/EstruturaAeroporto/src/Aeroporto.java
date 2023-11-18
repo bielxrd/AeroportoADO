@@ -1,42 +1,70 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aeroporto {
 
     private int id;
-    private int pistas;
-    private int terminais;
-    private Hangares[] hangares;
-    private String torreDeControle;
+    private int qtdPistas;
+
+    private int qtdTerminais;
+
+    private int qtdHangares;
+
+    private TorreDeControle torreDeControle;
+
+    private List<Voos> voos = new ArrayList<>();
 
 
-    public Aeroporto(int pistas, int terminais, String pista, String torreDeControle) {
-        this.pistas = pistas;
-        this.terminais = terminais;
-        this.hangares = new Hangares[5];
-        this.torreDeControle = torreDeControle;
+    public Aeroporto(int id, int qtdPistas, int qtdTerminais, int qtdHangares) {
+        this.id = id;
+        this.qtdPistas = qtdPistas;
+        this.qtdTerminais = qtdTerminais;
+        this.qtdHangares = qtdHangares;
+
     }
 
-    public int getPistas() {
-        return pistas;
+    public Aeroporto() {
+        this.qtdPistas = 1;
+        this.torreDeControle = new TorreDeControle();
     }
 
-    public void setPistas(int pistas) {
-        this.pistas = pistas;
+    public int getId() {
+        return id;
     }
 
-    public int getTerminais() {
-        return terminais;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setTerminais(int terminais) {
-        this.terminais = terminais;
+    public int getQtdPistas() {
+        return qtdPistas;
     }
 
-    public String getTorreDeControle() {
+    public void setQtdPistas(int qtdPistas) {
+        this.qtdPistas = qtdPistas;
+    }
+
+    public int getQtdTerminais() {
+        return qtdTerminais;
+    }
+
+    public void setQtdTerminais(int qtdTerminais) {
+        this.qtdTerminais = qtdTerminais;
+    }
+
+    public int getQtdHangares() {
+        return qtdHangares;
+    }
+
+    public void setQtdHangares(int qtdHangares) {
+        this.qtdHangares = qtdHangares;
+    }
+
+    public TorreDeControle getTorreDeControle() {
         return torreDeControle;
     }
 
-    public void setTorreDeControle(String torreDeControle) {
+    public void setTorreDeControle(TorreDeControle torreDeControle) {
         this.torreDeControle = torreDeControle;
     }
-
-
 }

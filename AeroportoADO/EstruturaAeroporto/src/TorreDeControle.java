@@ -4,26 +4,18 @@ import java.util.*;
 public class TorreDeControle {
 
     private int id;
-    private String controlador;
-    public ArrayDeque<Avioes> avioes;
+    private List<Radar> radares = new ArrayList<>();
 
+    private int qtdControladores;
+
+    public TorreDeControle(int qtdControladores) {
+        this.qtdControladores = qtdControladores;
+    }
 
     public TorreDeControle() {
-        this.avioes = new ArrayDeque<>();
-    }
-    public int getId() {
-        return id;
+        this.qtdControladores = 1;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
-    public String getControlador() {
-        return controlador;
-    }
 
-    public void setControlador(String controlador) {
-        this.controlador = controlador;
-    }
 }
